@@ -1,6 +1,9 @@
 var React = require('react')
 var ReactDOM = require('react-dom')
-var SimpleCurrencyInput = require('react-simple-currency')
+var { createRoot } = require('react-dom/client')
+var SimpleCurrencyInput = require('../../lib/SimpleCurrencyInput.js').default
+
+import './example.less'
 
 export default class App extends React.Component {
 	constructor(props) {
@@ -54,4 +57,5 @@ export default class App extends React.Component {
 	}
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
+const root = createRoot(document.getElementById('app'))
+root.render(<App />)
